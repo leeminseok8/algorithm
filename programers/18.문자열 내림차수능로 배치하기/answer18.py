@@ -6,7 +6,6 @@ def solution(s):
         b = ord(i)
         a.append(b)
 
-    a.sort()
     return a.sort()
 
 # b = 'adf'
