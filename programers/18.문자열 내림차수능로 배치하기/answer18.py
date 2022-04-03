@@ -1,15 +1,17 @@
 def solution(s):
-    # answer = ''
-    a = []
+    answer = ""
+    re = []
     b = 0
+    c = ""
     for i in s:
         b = ord(i)
-        a.append(b)
+        re.append(b)
+    re.sort(reverse=True)
+    for j in re:
+        c = chr(j)
+        answer += c
+    return answer
 
-    return a.sort()
 
-# b = 'adf'
-# c = b[1]
-
-# print(c)
-print(solution('abcde'))
+def solution(s):
+    return ''.join(sorted(s, reverse=True))
