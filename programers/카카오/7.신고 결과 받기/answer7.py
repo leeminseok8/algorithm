@@ -1,23 +1,31 @@
-def solution(id_list, report, k):
-    fired_list = {}
-    pattern_list = {}
-    for fire in report:
-        pattern_list[fire] = 1
-        fire = fire.split(' ')
-        if fire[1] not in fired_list and fire[0]+' '+fire[1] not in pattern_list:
-            fired_list[fire[1]] = 1
-        elif fire[1] in fired_list and fire[0]+' '+fire[1] not in pattern_list:
-            fired_list[fire[1]] += 1
+# def solution(id_list, report, k):
+#     # 신고 받은 사람과 횟수
+#     fired_list = {}
+#     # 신고자와 피신고자 중복 확인
+#     pattern_list = {}
+#     for fire in report:
+#         fire = fire.split(' ')
+#         if fire[1] not in fired_list and fire[0]+' '+fire[1] not in pattern_list:
+#             pattern_list[fire[0]+' '+fire[1]] = 1
+#             fired_list[fire[1]] = 1
+#         elif fire[1] in fired_list and fire[0]+' '+fire[1] not in pattern_list:
+#             fired_list[fire[1]] += 1
         
-    return fired_list
+#     return fired_list
 
-print(solution(["muzi", "frodo", "apeach", "neo"], ["muzi frodo","apeach frodo","frodo neo","muzi neo","apeach muzi"]))
+# print(solution(["muzi", "frodo", "apeach", "neo"], ["muzi frodo","apeach frodo","frodo neo","muzi neo","apeach muzi"]))
 
 # a = {'abc' : 'def', 'def' : 'hij'}
 # a['abc'] = 'aaa'
 # b = 'abc def'
 # b = b.split(' ')
 # print(b[0]+' '+b[1])
+
+a = {'a':'b'}
+b = ['c','d','e']
+for i in b:
+    a['a'] = a['a'], i
+print(len(a.values()))
 
 
 # 누가 누구 신고?
